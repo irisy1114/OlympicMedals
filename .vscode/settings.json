@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1f2e1e83-2a63-4530-a442-f60a6e9fd598/AppServices/subscriptions/1f2e1e83-2a63-4530-a442-f60a6e9fd598/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/OlympicMedals",
+    "appService.deploySubpath": "publish"
+}
