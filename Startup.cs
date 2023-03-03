@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using OlympicMedals.Models;
+using OlympicMedals.Hubs;
 
 namespace OlympicMedals
 {
@@ -30,17 +31,19 @@ namespace OlympicMedals
         {
             services.AddCors(options =>
             {
-                options.AddPolicy(name: "Open",
+                options.AddPolicy(name: "Hubs",
                     builder =>
                     {
-                        builder
-                            .AllowAnyOrigin()
+                        builder                            
                             .AllowAnyMethod()
-                            .AllowAnyHeader();
+                            .AllowAnyHeader()
+                            .WithOrigins("http://localhost:3000","https://irisy1114.github.io")
+                            .AllowCredentials();
                     });
             });
             services.AddDbContext<DataContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultSQLiteConnection")));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
+            services.AddSignalR();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { 
@@ -69,13 +72,14 @@ namespace OlympicMedals
 
             app.UseRouting();
 
-            app.UseCors("Open");
+            app.UseCors("Hubs");
             
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<MedalsHub>("/medalsHub");
             });
         }
     }

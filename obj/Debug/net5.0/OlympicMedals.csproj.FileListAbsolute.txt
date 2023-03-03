@@ -58,3 +58,7 @@ C:\Users\irisy\WCTC\2023-S1\Advanced Web Service Development\OlympicMedals\bin\D
 C:\Users\irisy\WCTC\2023-S1\Advanced Web Service Development\OlympicMedals\bin\Debug\net5.0\publish\appsettings.json
 C:\Users\irisy\WCTC\2023-S1\Advanced Web Service Development\OlympicMedals\bin\Debug\net5.0\publish\OlympicMedals.deps.json
 C:\Users\irisy\WCTC\2023-S1\Advanced Web Service Development\OlympicMedals\bin\Debug\net5.0\publish\OlympicMedals.runtimeconfig.json
+C:\Users\irisy\WCTC\2023-S1\Advanced Web Service Development\OlympicMedals\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\irisy\WCTC\2023-S1\Advanced Web Service Development\OlympicMedals\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\irisy\WCTC\2023-S1\Advanced Web Service Development\OlympicMedals\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\irisy\WCTC\2023-S1\Advanced Web Service Development\OlympicMedals\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
